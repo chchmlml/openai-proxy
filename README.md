@@ -1,16 +1,13 @@
 # openai-proxy
-只转发api的代理
+> 只转发api的代理
+> CloudFlare Pages利用其的Functions部署中转，作为一种备用方法。
 
 
-
-由于Workers的域名已经被污染了。在CloudFlare Workers自定义域名的方案之后，我来和大家一起在CloudFlare Pages利用其的Functions部署中转，作为一种备用方法。
-
-
-### 打开Github，新建一个仓库
+## 打开Github，新建一个仓库
 
 项目中添加一个新的worker文件
 
-### 点击creating a new file按钮
+## 点击creating a new file按钮
 
 1. 创建一个文件名为_worker.js的文件，然后复制以下代码
 
@@ -33,7 +30,7 @@ export default {
 2. 然后点`Commit new file`保存
 
 
-#### 扩展
+### 扩展
 
 > 如果想中转别的网站把下面代码中的`TELEGRAPH_URL`换为别网站就行
 
@@ -74,7 +71,7 @@ async function handleRequest(request) {
 ```
 </details>
 
-### 部署
+## 部署
 
 1. 登录到[Cloudflare](https://dash.cloudflare.com/)控制台.
 2. 在帐户主页中，选择`pages`> ` Create a project` > `Connect to Git`
@@ -85,6 +82,6 @@ async function handleRequest(request) {
 
 > 然后点`Continue to project`即可看到访问域名
 
-### 用法 
+## 用法 
 
 **[参考](https://github.com/x-dr/chatgptProxyAPI#用法)**
